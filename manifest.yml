@@ -1,0 +1,6 @@
+---
+    applications:
+    - instances: 1
+      buildpack: sdk-for-nodejs
+      command: npm start
+      memory: 256M
