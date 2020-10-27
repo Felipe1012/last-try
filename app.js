@@ -24,12 +24,15 @@ app.post('/stt',(req,res)=>{
       body: req
 
     };
+/*
     request(options, function (error, response) {
       if (error) throw new Error(error);
       console.log(response.body);
-      res.send("holaaaaaa")
 
     });
+*/
+    res.send("holaaaaaa")
+
 })
 
 app.listen(app.get('port'),()=>{
