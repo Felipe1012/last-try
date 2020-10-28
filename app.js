@@ -14,8 +14,13 @@ app.use(cors());
 app.post('/stt',(req,res)=>{
 
 
-  var audio = fs.readFileSync(req.body.audio);
+  var audio = req
+ 
+
+
+
     var request = require('request');
+
     var options = {
       'method': 'POST',
       'url': 'https://api.us-south.speech-to-text.watson.cloud.ibm.com/instances/2c86099d-5a2e-4191-a375-797ec3d1b2d6/v1/recognize',
@@ -25,14 +30,16 @@ app.post('/stt',(req,res)=>{
       },
       body: audio
     };
-
     console.log(req)
+
+    res.send("holaaa")
+/*
     request(options, function (error, response) {
       if (error) throw new Error(error);
       console.log(response.body);
       res.send(response.body)
     });
-
+*/
 })
 
 app.listen(app.get('port'),()=>{
