@@ -21,16 +21,15 @@ app.post('/stt',(req,res)=>{
         'Content-Type': 'audio/flac',
         'Authorization': 'Basic YXBpa2V5OnBGdWs2V2REaDFxckdJeFVXQXY1NXFqREFOVGQzdmlsa1AzdVZDc1ZqVUdq'
       },
-      body: req.body.audio
+      body: req
     };
 
+    console.log(req)
     request(options, function (error, response) {
       if (error) throw new Error(error);
       console.log(response.body);
       res.send(response.body)
     });
-
-    
 
 })
 
