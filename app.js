@@ -13,6 +13,8 @@ app.use(cors());
 
 app.post('/stt',(req,res)=>{
 
+
+  var audio = req;
     var request = require('request');
     var options = {
       'method': 'POST',
@@ -21,7 +23,7 @@ app.post('/stt',(req,res)=>{
         'Content-Type': 'audio/flac',
         'Authorization': 'Basic YXBpa2V5OnBGdWs2V2REaDFxckdJeFVXQXY1NXFqREFOVGQzdmlsa1AzdVZDc1ZqVUdq'
       },
-      body: req
+      body: audio
     };
 
     console.log(req)
