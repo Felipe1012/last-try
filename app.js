@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const morgan = require('morgan')
 const cors = require("cors");
-
+const fs=require('fs');
 
 app.set('port', process.env.PORT || 3000)
 app.use(morgan('dev'));
@@ -14,7 +14,7 @@ app.use(cors());
 app.post('/stt',(req,res)=>{
 
 
-  var audio = req;
+  var audio = fs.createReadStream(req.body.audio);
     var request = require('request');
     var options = {
       'method': 'POST',
