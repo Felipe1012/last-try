@@ -14,7 +14,7 @@ app.use(cors());
 app.post('/stt',(req,res)=>{
 
 
-  var audio = req;
+  var audio = fs.readFileSync(req.body.audio);
     var request = require('request');
     var options = {
       'method': 'POST',
