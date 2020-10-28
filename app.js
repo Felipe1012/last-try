@@ -3,6 +3,7 @@ const app = express();
 const morgan = require('morgan')
 const cors = require("cors");
 const fs=require('fs');
+
 app.set('port', process.env.PORT || 3000)
 app.use(morgan('dev'));
 app.use(express.urlencoded({extended:false}))
@@ -13,7 +14,7 @@ app.use(cors());
 app.post('/stt',(req,res)=>{
 
 
-  var audio = req;
+  var audio = fs.readFileSync(req.body.audio);
     var request = require('request');
     var options = {
       'method': 'POST',
