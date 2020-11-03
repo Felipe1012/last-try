@@ -29,16 +29,15 @@ app.post('/stt',(req,res)=>{
 
     console.log(req)
 
-    res.send("holaaa")
 
 
-/*
+
     request(options, function (error, response) {
       if (error) throw new Error(error);
       console.log(response.body);
       res.send(response.body)
     });
-*/
+
 })
 
 app.listen(app.get('port'),()=>{
