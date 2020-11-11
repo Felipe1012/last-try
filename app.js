@@ -2,42 +2,33 @@ const express = require('express');
 const app = express();
 const morgan = require('morgan')
 const cors = require("cors");
-const fs=require('fs');
+const fs = require('fs');
+const { mainModule } = require('process');
+const stt = require('./stt');
 
 app.set('port', process.env.PORT || 3000)
 app.use(morgan('dev'));
-app.use(express.urlencoded({extended:false}))
+app.use(express.urlencoded({ extended: false }))
 app.use(express.json());
 app.use(cors());
 
 
-app.post('/stt',(req,res)=>{
+app.post('/stt',  (req, res)=> {
+console.log("jelo")
+var audio = req
 
+  try {
+    console.log("SSSSSSSSSSSSSSSSSS")
 
-  var audio = req
- 
-    var request = require('request');
-    var options = {
-      'method': 'POST',
-      'url': 'https://api.us-south.speech-to-text.watson.cloud.ibm.com/instances/2c86099d-5a2e-4191-a375-797ec3d1b2d6/v1/recognize',
-      'headers': {
-        'Content-Type': 'audio/flac',
-        'Authorization': 'Basic YXBpa2V5OnBGdWs2V2REaDFxckdJeFVXQXY1NXFqREFOVGQzdmlsa1AzdVZDc1ZqVUdq'
-      },
-      body: audio
-    };
-
-    console.log(req)
-
-
-    request(options, function (error, response) {
-      if (error) throw new Error(error);
-      console.log(response.body);
-      res.send(response.body)
-    });
-
+     stt(audio).then((ans) => {
+       console.log("YEEEEEEEEE")
+      res.send(ans)
+    })
+  } catch (err) {
+    res.status(500).json({ message: "No se pudo analizar el audio ingresado" });
+  }
 })
 
-app.listen(app.get('port'),()=>{
-    console.log(`server on port ${app.get('port')}`)
+app.listen(app.get('port'), () => {
+  console.log(`server on port ${app.get('port')}`)
 })
