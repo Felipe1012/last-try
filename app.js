@@ -18,10 +18,8 @@ console.log("jelo")
 var audio = req
 
   try {
-    console.log("SSSSSSSSSSSSSSSSSS")
 
      stt(audio).then((ans) => {
-       console.log("YEEEEEEEEE")
       res.send(ans)
     })
   } catch (err) {

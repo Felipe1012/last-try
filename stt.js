@@ -3,7 +3,7 @@ const app = express();
 const morgan = require('morgan')
 const cors = require("cors");
 const fs=require('fs');
-
+const SpeechToTextV1 = require('ibm-watson/speech-to-text/v1');
 function stt(input){
     return new Promise(function (resolve, reject) {
     var audio = input
@@ -21,11 +21,10 @@ function stt(input){
       console.log(audio)
   
     request(options, function (error, response) {
-        console.log("funciona")
 
       if (error) throw new Error(error);
-      console.log(response.body);
-      return resolve(response.body)
+      console.log(response);
+      return resolve(response)
     });
 
 
