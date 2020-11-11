@@ -7,7 +7,6 @@ const SpeechToTextV1 = require('ibm-watson/speech-to-text/v1');
 function stt(input){
     return new Promise(function (resolve, reject) {
     var audio = input
- 
     var request = require('request');
     var options = {
       'method': 'POST',
