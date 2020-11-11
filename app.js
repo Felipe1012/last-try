@@ -5,6 +5,9 @@ const cors = require("cors");
 const fs = require('fs');
 const { mainModule } = require('process');
 const stt = require('./stt');
+const callNLUnderstanding = require('./nlu');
+const params = require("./params");
+const proDataNL = require("./proDataNL");
 
 app.set('port', process.env.PORT || 3000)
 app.use(morgan('dev'));
@@ -18,9 +21,18 @@ console.log("jelo")
 var audio = req
 
   try {
+    let finalJson = []
 
      stt(audio).then((ans) => {
-      res.send(ans)
+       console.log("este si")
+       callNLUnderstanding(params,ans).then((respuesta)=>{
+         console.log("primero")
+        proDataNL(respuesta).then((finalRes) => {
+          console.log("segundo")
+          finalJson.push(finalRes)
+         res.send(finalRes)
+        })
+       })
     })
   } catch (err) {
     res.status(500).json({ message: "No se pudo analizar el audio ingresado" });

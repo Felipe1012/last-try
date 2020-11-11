@@ -4,6 +4,7 @@ const morgan = require('morgan')
 const cors = require("cors");
 const fs = require('fs');
 const SpeechToTextV1 = require('ibm-watson/speech-to-text/v1');
+
 function stt(input) {
   return new Promise(function (resolve, reject) {
     var audio = input
@@ -19,13 +20,22 @@ function stt(input) {
       body: audio,
 
     };
-    console.log(audio)
 
     request(options, function (error, response) {
 
       if (error) throw new Error(error);
-      console.log(response.body);
-      return resolve(response.body)
+
+      var resp = JSON.parse(response.body)
+      var final = []
+
+      for (let i in resp.results) {
+        final[i] = resp.results[i].alternatives[0].transcript
+      }
+
+      final = JSON.stringify(final)
+      //resp.results[0].alternatives[0].transcript
+      console.log(final)
+      return resolve(final)
     });
 
 
