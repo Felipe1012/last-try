@@ -37,7 +37,6 @@ function callNLUnderstanding(params, text) {
             naturalLanguageUnderstanding
                 .analyze(analyzeParams)
                 .then((analysisResults) => {
-
                     console.log(analysisResults.result)
                     resolve(analysisResults.result);
                 })
