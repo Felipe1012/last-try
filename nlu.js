@@ -8,6 +8,10 @@ const { IamAuthenticator } = require("ibm-watson/auth");
 
 function callNLUnderstanding(params, text) {
     return new Promise(function (resolve, reject) {
+        text = text.replace(/\\"/g, "");
+        text = text.replace(/,/g, "");
+        text = text.replace(/"/g, "");
+
         if (params.nl_api_key !== "") {
             text = JSON.stringify(text)
             console.log("Text uploaded\nAnalyzing text...");
@@ -34,7 +38,6 @@ function callNLUnderstanding(params, text) {
                 .then((analysisResults) => {
 
                     console.log("reeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeecibo esto " + text)
-
                     console.log(analysisResults.result)
                     resolve(analysisResults.result);
                 })

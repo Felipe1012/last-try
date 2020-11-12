@@ -20,14 +20,26 @@ function proDataNL(resultNL) {
           delete item.confidence;
           delete item.score;
           delete item.text;
-
-
         }
+        for (var item of entities) {
+          //item.type = item.type[0] + item.type.slice(1).toLowerCase();
+          //item.sentence = item.sentence[0].toUpperCase() + item.sentence.slice(1);    
+          // Eliminar propiedades de un objeto
+          delete item.disambiguation;
+          delete item.count;
+          delete item.confidence;
+          delete item.score;
+        }
+
         console.log("rrrrr" + entities)
 
         // Delete duplicates
+        var respuesta = {
+          "Entities": entities,
+          "Relations": relations
+        }
 
-        resolve(entities);
+        resolve(respuesta);
       } else resolve({ text: "vacio" });
 
 

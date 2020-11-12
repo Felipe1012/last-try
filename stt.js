@@ -12,9 +12,8 @@ function stt(input) {
     var options = {
       'method': 'POST',
       'url': 'https://api.us-south.speech-to-text.watson.cloud.ibm.com/instances/2c86099d-5a2e-4191-a375-797ec3d1b2d6/v1/recognize?model=es-ES_BroadbandModel',
-
       'headers': {
-        'Content-Type': 'audio/flac',
+        'Content-Type': 'audio/mp3',
         'Authorization': 'Basic YXBpa2V5OnBGdWs2V2REaDFxckdJeFVXQXY1NXFqREFOVGQzdmlsa1AzdVZDc1ZqVUdq'
       },
       body: audio,
@@ -33,6 +32,9 @@ function stt(input) {
       }
 
       final = JSON.stringify(final)
+      final = final.replace(/\\"/g, " ");
+      final = final.replace(/,/g, " ");
+
       //resp.results[0].alternatives[0].transcript
       console.log(final)
       return resolve(final)
