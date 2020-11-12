@@ -33,11 +33,11 @@ function callNLUnderstanding(params, text) {
                     },
                 },
             };
+
             naturalLanguageUnderstanding
                 .analyze(analyzeParams)
                 .then((analysisResults) => {
 
-                    console.log("reeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeecibo esto " + text)
                     console.log(analysisResults.result)
                     resolve(analysisResults.result);
                 })
