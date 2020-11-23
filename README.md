@@ -55,11 +55,11 @@ Como respuesta obtenemos el análisis del audio, acá se ve si la opinion de usu
 
 ## Construido con 🛠️
 
-* [IBM Watson Speech to Text](https://cloud.ibm.com/docs/discovery?topic=discovery-sources#connectwebcrawl) 
+* [IBM Watson Speech to Text](https://cloud.ibm.com/apidocs/speech-to-text) 
 * [IBM Natural Language Understanding](https://www.ibm.com/co-es/cloud/watson-natural-language-understanding) 
 
 ## Wiki 📖
-* [Uso de Api Watson Discovery](https://cloud.ibm.com/apidocs/discovery)
+* [Uso de Api Watson Discovery](https://cloud.ibm.com/apidocs/speech-to-text)
 * [Uso de Api NLU](https://cloud.ibm.com/apidocs/natural-language-understanding)
 ## Autores ✒️
 
