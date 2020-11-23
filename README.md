@@ -4,7 +4,7 @@ IBM Watson Speech to text es una herramienta de inteliencia artificial que facil
 
 
 ## Arquitectura 🚀
-![WhatsApp Image 2020-07-21 at 11 08 05 AM](https://user-images.githubusercontent.com/46906169/88103650-e6f2dc80-cb66-11ea-9963-32ef5e304002.jpeg)
+![WhatsApp Image 2020-07-21 at 11 08 05 AM](https://github.com/Felipe1012/speech-to-text-NLU/blob/master/arq-stt.PNG)
 
 ### Pre-requisitos 📋
 
