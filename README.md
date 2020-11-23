@@ -46,15 +46,16 @@ Por otro lado, la autenticación necesaria para el servicio se Speech to text se
 
 
 ## Ejecutando las pruebas ⚙️
-Se puede hacer busquedas por marca o modelo.
-<img width="960" alt="inicio" src="https://user-images.githubusercontent.com/46906169/88119307-ace50300-cb85-11ea-9e9b-5ac0a5041fc3.PNG">
+Ejecutamos el método POST en la direccion de nuestra aplicacion, en este caso donde la tengamos desplegada o si la estamos corriendo local será localhost:3000/stt, lo único que debemos enviar en este POST es un archivo de audio, en este caso en formato mp3 en la parte de binario en el postman:
 
-<img width="947" alt="secd" src="https://user-images.githubusercontent.com/46906169/88119819-1e718100-cb87-11ea-96ca-ce1298d64697.PNG">
+<img width="960" alt="inicio" src="https://github.com/Felipe1012/speech-to-text-NLU/blob/master/postman.PNG">
+
+Como respuesta obtenemos el análisis del audio, acá se ve si la opinion de usuario es positiva o negativa
 
 
 ## Construido con 🛠️
 
-* [IBM Watson Discovery](https://cloud.ibm.com/docs/discovery?topic=discovery-sources#connectwebcrawl) 
+* [IBM Watson Speech to Text](https://cloud.ibm.com/docs/discovery?topic=discovery-sources#connectwebcrawl) 
 * [IBM Natural Language Understanding](https://www.ibm.com/co-es/cloud/watson-natural-language-understanding) 
 
 ## Wiki 📖
