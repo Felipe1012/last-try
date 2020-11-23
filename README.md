@@ -53,7 +53,7 @@ Ejecutamos el método POST en la direccion de nuestra aplicacion, en este caso d
 
 <img width="960" alt="inicio" src="https://github.com/Felipe1012/speech-to-text-NLU/blob/master/postman.PNG">
 
-Como respuesta obtenemos el análisis del audio, acá se ve si la opinion de usuario es positiva o negativa
+Como respuesta obtenemos el análisis del audio, acá se ve si la opinion de usuario es positiva o negativa y demás detalles que dependerán del audio que seleccionemos.
 
 
 ## Construido con 🛠️
