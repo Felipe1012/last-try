@@ -24,18 +24,24 @@ En el archivo ***params.json*** se encuentran las credenciales de los servicios 
     "nl_version": "Versión de su modelo",
     "nl_api_key": "ApiKey del servicio de NLU que creó",
     "nl_url": "URL del servicio de NLU",
-    "nl_model_id": "ID del modelo desplegado"
-    
+    "nl_model_id": "ID del modelo desplegado"   
 ```
-Eel ***model_id*** que se genera a partir del siguiente comando cURL.
+El ***model_id*** que se genera a partir del siguiente comando cURL.
 ```
 curl --user "apikey:{apikey}" "{url}/v1/models?version=2019-07-12"
-
 ```
-![credenciales](https://user-images.githubusercontent.com/46906169/88110643-2bd04080-cb72-11ea-855b-bc3e31472421.png)
 
 
 ![credenciales 2](https://user-images.githubusercontent.com/46906169/88112977-7d7aca00-cb76-11ea-8eb8-8766ba15d04f.png)
+
+Por otro lado, la autenticación necesaria para el servicio se Speech to text se encuentra en el mismo archivo donde se hace el request ***stt.js*** esepecificamente en los headers del metodo POST que se implementó para hacer la conexión con el servicio, allí vemos que se necesitan las siguientes credenciales:
+
+```
+    "URL": "URL de nuestro servicio se Speech to Text"
+    "Content-Type": "Formato de audio que manejaremos Ej. mp3, FLAC, etc..."
+    "Authorization": "Apikey de nuestro servicio e Speech To Text"
+```
+![credenciales](https://user-images.githubusercontent.com/46906169/88110643-2bd04080-cb72-11ea-855b-bc3e31472421.png)
 
 
 
