@@ -41,6 +41,9 @@ Por otro lado, la autenticación necesaria para el servicio se Speech to text se
     "Content-Type": "Formato de audio que manejaremos Ej. mp3, FLAC, etc..."
     "Authorization": "Apikey de nuestro servicio e Speech To Text"
 ```
+
+Adicional a esto, en la url añadimos como parametro el modelo de lenguaje que va a tener nuesto proyecto, en este caso es español en su variante para Colombia, es decir es-CO_BroadbandModel, para mayor informacion sobre modelos de lenuaje en Speech to text, de click [aquí](https://cloud.ibm.com/docs/speech-to-text?topic=speech-to-text-models#models)
+
 ![credenciales](https://github.com/Felipe1012/speech-to-text-NLU/blob/master/sttimage.png)
 
 
@@ -59,7 +62,7 @@ Como respuesta obtenemos el análisis del audio, acá se ve si la opinion de usu
 * [IBM Natural Language Understanding](https://www.ibm.com/co-es/cloud/watson-natural-language-understanding) 
 
 ## Wiki 📖
-* [Uso de Api Watson Discovery](https://cloud.ibm.com/apidocs/speech-to-text)
+* [Uso de Api Speech to Text](https://cloud.ibm.com/apidocs/speech-to-text)
 * [Uso de Api NLU](https://cloud.ibm.com/apidocs/natural-language-understanding)
 ## Autores ✒️
 
