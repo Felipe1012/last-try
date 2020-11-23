@@ -41,7 +41,7 @@ Por otro lado, la autenticación necesaria para el servicio se Speech to text se
     "Content-Type": "Formato de audio que manejaremos Ej. mp3, FLAC, etc..."
     "Authorization": "Apikey de nuestro servicio e Speech To Text"
 ```
-![credenciales](https://user-images.githubusercontent.com/46906169/88110643-2bd04080-cb72-11ea-855b-bc3e31472421.png)
+![credenciales](https://github.com/Felipe1012/speech-to-text-NLU/blob/master/sttimage.png)
 
 
 
