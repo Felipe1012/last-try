@@ -49,7 +49,7 @@ Adicional a esto, en la url añadimos como parametro el modelo de lenguaje que v
 
 
 ## Ejecutando las pruebas ⚙️
-Ejecutamos el método POST en la direccion de nuestra aplicacion, en este caso donde la tengamos desplegada o si la estamos corriendo local será localhost:3000/stt, lo único que debemos enviar en este POST es un archivo de audio, en este caso en formato mp3 en la parte de binario en el postman:
+Ejecutamos el método POST en la direccion de nuestra aplicacion, en este caso donde la tengamos desplegada, en este ejemplo se encuentra en la direccion ***https://last-try.us-east.mybluemix.net/stt*** o si la estamos corriendo local será ***localhost:3000/stt***, lo único que debemos enviar en este POST es un archivo de audio, en este caso en formato mp3 en la parte de binario en el postman:
 
 <img width="960" alt="inicio" src="https://github.com/Felipe1012/speech-to-text-NLU/blob/master/postman.PNG">
 
